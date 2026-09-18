@@ -1,6 +1,16 @@
 # 🕵️‍♂️ Anonymous P2P Chat (WebRTC)
 
+<div align="center">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/fabjan4u/anonieme-chat/pulls)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange.svg?style=flat-square)](https://github.com/fabjan4u/anonieme-chat/issues)
+[![WebRTC](https://img.shields.io/badge/WebRTC-P2P-ff69b4?style=flat-square)](https://webrtc.org/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://anonieme-chat.onrender.com/)
+
 *(Nederlandse versie hieronder / Dutch version below)*
+
+</div>
 
 A completely anonymous, secure, and lightning-fast Peer-to-Peer chat application built with WebRTC, React, and Node.js.
 
@@ -33,6 +43,8 @@ The easiest way to run this app yourself is via Render. It's 100% free and takes
 
 ## 🗺️ Roadmap & Upcoming Features
 
+Want to help? Check out our roadmap below and pick any open item!
+
 ### Phase 1: Stability & Core Experience (UX)
 - [ ] **Room Collision Protection:** Lock room once 2 peers join; notify 3rd peers that the room code is occupied.
 - [ ] **Typing Indicators:** Real-time "Typing..." status over WebRTC data channel.
@@ -48,6 +60,16 @@ The easiest way to run this app yourself is via Render. It's 100% free and takes
 - [ ] **Multi-Peer Group Chat (Mesh WebRTC):** Enable 3+ participants in the same room.
 - [ ] **Dedicated TURN Relay:** High-performance fallback relay for enhanced stability across carrier firewalls.
 - [ ] **Theme Toggle:** User-selectable Dark/Light mode.
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Feel free to open an issue if you have ideas, feedback, or want to report a bug!
 
 ---
 
@@ -84,6 +106,8 @@ De makkelijkste manier om deze app zelf te draaien is via Render. Het is 100% gr
 
 ## 🗺️ Roadmap & Toekomstige Functies
 
+Wil je meehelpen? Bekijk de roadmap hieronder en pak gerust een item op!
+
 ### Fase 1: Stabiliteit & Gebruikerservaring (UX)
 - [ ] **Kamerbeveiliging:** Vergrendel de kamer zodra er 2 personen in zitten en geef eventuele 3e personen een bezet-melding.
 - [ ] **Typ-indicatoren:** Realtime zien wanneer de ander aan het typen is.
@@ -99,3 +123,13 @@ De makkelijkste manier om deze app zelf te draaien is via Render. Het is 100% gr
 - [ ] **Groepsgesprekken (Mesh WebRTC):** Gesprekken met 3 of meer personen in dezelfde kamer.
 - [ ] **Eigen Dedicated TURN Relay:** Extra snelle fallback relay voor gegarandeerde 4G-prestaties.
 - [ ] **Dark Mode Schakelaar:** Eenvoudig wisselen tussen lichte en donkere modus.
+
+## 🤝 Meewerken & Bijdragen
+Vind je dit een gaaf project en wil je helpen bouwen? Bijdragen zijn van harte welkom!
+1. Fork het project naar je eigen GitHub
+2. Maak een nieuwe feature-branch (`git checkout -b feature/MooieFeature`)
+3. Commit je wijzigingen (`git commit -m 'MooieFeature toegevoegd'`)
+4. Push naar je branch (`git push origin feature/MooieFeature`)
+5. Open een Pull Request!
+
+Heb je feedback, een suggestie of een bug ontdekt? Maak gerust een **Issue** aan op deze repository!
