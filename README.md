@@ -29,7 +29,25 @@ The easiest way to run this app yourself is via Render. It's 100% free and takes
    - **Language:** `Node`
    - **Build Command:** `npm install`
    - **Start Command:** `node index.js`
-5. Click Deploy! 
+5. Click Deploy!
+
+## 🗺️ Roadmap & Upcoming Features
+
+### Phase 1: Stability & Core Experience (UX)
+- [ ] **Room Collision Protection:** Lock room once 2 peers join; notify 3rd peers that the room code is occupied.
+- [ ] **Typing Indicators:** Real-time "Typing..." status over WebRTC data channel.
+- [ ] **Audio & Notifications:** Audible message chime and optional browser push notifications.
+- [ ] **Auto-Reconnect:** Graceful background reconnection when switching between WiFi and mobile data.
+
+### Phase 2: Rich Media & Enhancements
+- [ ] **P2P File & Image Sharing:** Direct device-to-device file transfer without uploading to any server.
+- [ ] **Self-Destructing Messages:** Timer-based message deletion after reading (ephemeral chat).
+- [ ] **Temporary Aliases:** Optional display names for session clarity while preserving anonymity.
+
+### Phase 3: Scaling & Groups
+- [ ] **Multi-Peer Group Chat (Mesh WebRTC):** Enable 3+ participants in the same room.
+- [ ] **Dedicated TURN Relay:** High-performance fallback relay for enhanced stability across carrier firewalls.
+- [ ] **Theme Toggle:** User-selectable Dark/Light mode.
 
 ---
 
@@ -63,3 +81,21 @@ De makkelijkste manier om deze app zelf te draaien is via Render. Het is 100% gr
    - **Build Command:** `npm install`
    - **Start Command:** `node index.js`
 5. Klik op Deploy! Je krijgt nu een unieke link (bijv. `jouw-chat.onrender.com`) die je met iedereen kunt delen.
+
+## 🗺️ Roadmap & Toekomstige Functies
+
+### Fase 1: Stabiliteit & Gebruikerservaring (UX)
+- [ ] **Kamerbeveiliging:** Vergrendel de kamer zodra er 2 personen in zitten en geef eventuele 3e personen een bezet-melding.
+- [ ] **Typ-indicatoren:** Realtime zien wanneer de ander aan het typen is.
+- [ ] **Geluiden & Notificaties:** Subtiel meldingsgeluid bij nieuwe berichten en browser-notificaties.
+- [ ] **Automatisch Herverbinden:** Naadloos herstel van de verbinding bij het overschakelen tussen WiFi en 4G.
+
+### Fase 2: Rich Media & Uitbreidingen
+- [ ] **P2P Bestanden & Foto's:** Direct foto's en documenten sturen tussen apparaten zonder tussenkomst van een server.
+- [ ] **Zelfvernietigende Berichten:** Berichten die automatisch verdwijnen na een ingestelde timer.
+- [ ] **Tijdelijke Aliassen:** Optioneel een tijdelijke bijnaam instellen voor duidelijkheid in het gesprek.
+
+### Fase 3: Schaalbaarheid & Groepen
+- [ ] **Groepsgesprekken (Mesh WebRTC):** Gesprekken met 3 of meer personen in dezelfde kamer.
+- [ ] **Eigen Dedicated TURN Relay:** Extra snelle fallback relay voor gegarandeerde 4G-prestaties.
+- [ ] **Dark Mode Schakelaar:** Eenvoudig wisselen tussen lichte en donkere modus.
