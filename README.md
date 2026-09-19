@@ -7,10 +7,13 @@
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange.svg?style=flat-square)](https://github.com/fabjan4u/anonieme-chat/issues)
 [![WebRTC](https://img.shields.io/badge/WebRTC-P2P-ff69b4?style=flat-square)](https://webrtc.org/)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://anonieme-chat.onrender.com/)
+[![GitHub Stars](https://img.shields.io/github/stars/fabjan4u/anonieme-chat?style=social)](https://github.com/fabjan4u/anonieme-chat/stargazers)
 
 *(Nederlandse versie hieronder / Dutch version below)*
 
 </div>
+
+> ⭐️ **Support Open-Source Privacy:** If you find this project interesting or useful, please consider giving this repository a **star**! It helps others discover decentralized, private communication tools.
 
 A completely anonymous, secure, and lightning-fast Peer-to-Peer chat application built with WebRTC, React, and Node.js.
 
@@ -74,6 +77,8 @@ Feel free to open an issue if you have ideas, feedback, or want to report a bug!
 ---
 
 # 🕵️‍♂️ Anonieme P2P Chat (Nederlands)
+
+> ⭐️ **Steun dit open-source project:** Vind je dit een toffe of nuttige app? Geef de repo een **ster** op GitHub — daarmee help je meer mensen veilige, anonieme communicatie te ontdekken!
 
 Een volledig anonieme, veilige en snelle Peer-to-Peer chat applicatie. Gebouwd met WebRTC, React, en Node.js. 
 
