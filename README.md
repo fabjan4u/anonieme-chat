@@ -15,22 +15,29 @@
 
 > ⭐️ **Support Open-Source Privacy:** If you find this project interesting or useful, please consider giving this repository a **star**! It helps others discover decentralized, private communication tools.
 
-A completely anonymous, secure, and lightning-fast Peer-to-Peer chat application built with WebRTC, React, and Node.js.
+A heavily secured, completely anonymous, and lightning-fast Peer-to-Peer chat application built with WebRTC, React, and Node.js. 
 
-There are no accounts, no phone numbers, and **absolutely zero logs or messages are stored** on any server. Once the connection is established, the devices communicate directly (Peer-to-Peer) with each other, secured by state-of-the-art encryption standards.
+There are no accounts, no phone numbers, and **absolutely zero logs or messages are stored** on any server. 
 
 ## 🟢 Live Demo
 You can test the application right now using this live instance:
 👉 **[https://anonieme-chat.onrender.com/](https://anonieme-chat.onrender.com/)**
 
-*Tip: Open this link on two different devices (or share it with a friend), agree on a secret code (like "1234"), and click "Connect".*
+*Tip: Open this link on two different devices, agree on a Room Code (like "1234") AND a Secret Password, and click "Secure Connect".*
 
-## ✨ Features
-- **100% End-to-End Encrypted (E2EE):** Messages flow directly between the two users via a secure WebRTC Data Channel (DTLS/SCTP).
-- **No Identity:** You share a temporary, self-made pairing code with your chat partner. No one knows who you are.
-- **No Database:** No data is stored anywhere.
-- **4G & WiFi Support:** Uses free public STUN and TURN servers (OpenRelay) for robust NAT-traversal, even on strict mobile networks.
-- **Progressive Web App (PWA) Ready:** Add the webpage to your home screen on iOS or Android, and it feels like a native app.
+## 🔒 Hardened Security Features (New)
+This app has recently undergone a massive security overhaul to mitigate the inherent flaws of standard WebRTC apps:
+
+- **Signaling E2E Encryption:** Connection data (SDP/ICE) is encrypted locally in your browser using **AES-GCM (Web Crypto API)** before reaching the server. Even if the signaling server is compromised, it cannot execute a Man-In-The-Middle (MITM) attack without your shared password.
+- **Strict IP-Leak Protection (Relay-Only):** Standard STUN servers have been stripped out. WebRTC is forced to operate in `relay` mode via a TURN server. This ensures your local network and public IP address are completely hidden from your chat partner.
+- **Visual Session Verification:** A cryptographic hash (Session Code) based on your shared keys is displayed. If both screens show the same Session Code, you are cryptographically guaranteed to be safe from eavesdropping.
+- **Backend Hardening:** The Node.js server features in-memory Rate Limiting to prevent brute-forcing and is configured for **Zero Logging**. No socket IDs or room activities are printed to terminal logs.
+
+### ⚠️ Security & Threat Model Disclaimer
+*Transparency is crucial in cybersecurity.* While this app employs aggressive hardening (AES-GCM signaling, Relay-only WebRTC), it is a browser-based hobby project, NOT a replacement for audited protocols like Signal or Session. 
+- **Browser limits:** Because this is a web app, users are vulnerable to JavaScript supply chain attacks if the host server is compromised. 
+- **No Forward Secrecy:** We lack the advanced Double Ratchet mechanism. 
+- **Use responsibly:** Do not use this for life-and-death threat models.
 
 ## 🚀 Self-Hosting (Deploy)
 
@@ -44,26 +51,6 @@ The easiest way to run this app yourself is via Render. It's 100% free and takes
    - **Start Command:** `node index.js`
 5. Click Deploy!
 
-## 🗺️ Roadmap & Upcoming Features
-
-Want to help? Check out our roadmap below and pick any open item!
-
-### Phase 1: Stability & Core Experience (UX)
-- [ ] **Room Collision Protection:** Lock room once 2 peers join; notify 3rd peers that the room code is occupied.
-- [ ] **Typing Indicators:** Real-time "Typing..." status over WebRTC data channel.
-- [ ] **Audio & Notifications:** Audible message chime and optional browser push notifications.
-- [ ] **Auto-Reconnect:** Graceful background reconnection when switching between WiFi and mobile data.
-
-### Phase 2: Rich Media & Enhancements
-- [ ] **P2P File & Image Sharing:** Direct device-to-device file transfer without uploading to any server.
-- [ ] **Self-Destructing Messages:** Timer-based message deletion after reading (ephemeral chat).
-- [ ] **Temporary Aliases:** Optional display names for session clarity while preserving anonymity.
-
-### Phase 3: Scaling & Groups
-- [ ] **Multi-Peer Group Chat (Mesh WebRTC):** Enable 3+ participants in the same room.
-- [ ] **Dedicated TURN Relay:** High-performance fallback relay for enhanced stability across carrier firewalls.
-- [ ] **Theme Toggle:** User-selectable Dark/Light mode.
-
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 1. Fork the Project
@@ -72,30 +59,35 @@ Contributions, issues, and feature requests are welcome!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-Feel free to open an issue if you have ideas, feedback, or want to report a bug!
-
 ---
 
 # 🕵️‍♂️ Anonieme P2P Chat (Nederlands)
 
 > ⭐️ **Steun dit open-source project:** Vind je dit een toffe of nuttige app? Geef de repo een **ster** op GitHub — daarmee help je meer mensen veilige, anonieme communicatie te ontdekken!
 
-Een volledig anonieme, veilige en snelle Peer-to-Peer chat applicatie. Gebouwd met WebRTC, React, en Node.js. 
+Een zwaar beveiligde, volledig anonieme en snelle Peer-to-Peer chat applicatie. Gebouwd met WebRTC, React, en Node.js. 
 
-Er zijn geen accounts, geen telefoonnummers en er worden **absoluut nul logs of berichten opgeslagen** op een server. Zodra de verbinding tot stand is gekomen, communiceren de apparaten direct (Peer-to-Peer) met elkaar, beveiligd via de modernste encryptiestandaarden.
+Er zijn geen accounts, geen telefoonnummers en er worden **absoluut nul logs of berichten opgeslagen** op een server.
 
 ## 🟢 Live Testen
 Je kunt de applicatie direct uitproberen via deze live versie:
 👉 **[https://anonieme-chat.onrender.com/](https://anonieme-chat.onrender.com/)**
 
-*Tip: Open deze link op twee verschillende apparaten (of deel hem met een vriend), spreek een geheime code af (bijv. "1234") en druk op "Verbinden".*
+*Tip: Open deze link op twee verschillende apparaten, spreek een Kamer Code (bijv. "123") én een Geheim Wachtwoord af, en druk op "Veilig Verbinden".*
 
-## ✨ Features
-- **100% End-to-End Encrypted (E2EE):** Berichten lopen direct tussen de twee gebruikers via een beveiligd WebRTC Data Channel (DTLS/SCTP).
-- **Geen identiteit:** Je deelt een tijdelijke, zelfbedachte koppelcode met je gesprekspartner. Niemand weet wie je bent.
-- **Geen database:** Er wordt geen enkele vorm van data opgeslagen.
-- **4G & WiFi Support:** Maakt gebruik van gratis publieke STUN en TURN servers (OpenRelay) voor robuuste NAT-traversal, zelfs op strenge mobiele netwerken.
-- **Progressive Web App (PWA) Ready:** Voeg de webpagina toe aan je startscherm op iOS of Android en het voelt als een native app.
+## 🔒 Hardcore Beveiligingsfuncties (Nieuw)
+Deze app heeft recent een gigantische beveiligings-upgrade gekregen om de fundamentele zwaktes van normale WebRTC-apps te elimineren:
+
+- **E2E Versleutelde Signaling:** Al het verbindingsverkeer wordt *lokaal in je browser* versleuteld met **AES-GCM (Web Crypto API)** en een PBKDF2 afgeleide sleutel. Zelfs een gehackte Render-server ziet alleen onleesbare ruis en kan geen MITM-aanval uitvoeren zonder jullie geheime wachtwoord.
+- **Anti-IP-Lekken (Relay-Only):** We hebben publieke STUN-servers uitgeschakeld. Al het WebRTC netwerkverkeer wordt geforceerd via de beveiligde TURN-server gestuurd (`relay`). Hierdoor lekt jouw IP-adres nooit meer naar je chatpartner.
+- **Sessie Verificatie (Safety Numbers):** De chat toont nu een unieke "Sessie Code" in beeld (gebaseerd op een veilige SHA-hash). Als jij en je partner dezelfde code zien, is afluisteren wiskundig onmogelijk gemaakt.
+- **Backend Hardening:** De Node.js server kent nu strikte in-memory **Rate Limiting** (tegen brute-force) en **Zero Logging**. Er wordt niets (geen IP's, geen kamer-ID's) meer naar de terminal-logs van de hoster geschreven.
+
+### ⚠️ Security & Threat Model Disclaimer
+*Eerlijkheid duurt het langst in cybersecurity.* Hoewel deze app nu maximaal gehard is tegen de bekende kwetsbaarheden van WebRTC, blijft het een hobbyproject in een webbrowser en is het GEEN vervanger voor geauditeerde apps als Signal of SimpleX.
+- Omdat het een web-app is, blijf je kwetsbaar voor "Supply Chain" aanvallen (als iemand de Render server hackt en de JavaScript frontend aanpast, kan je wachtwoord gestolen worden voordat het versleutelt).
+- Deze app heeft geen geavanceerde *Forward Secrecy* (Double Ratchet). 
+- Gebruik het voor privacy en anonieme chats, maar niet als je leven er vanaf hangt.
 
 ## 🚀 Zelf hosten (Deploy)
 
@@ -107,27 +99,7 @@ De makkelijkste manier om deze app zelf te draaien is via Render. Het is 100% gr
    - **Language:** `Node`
    - **Build Command:** `npm install`
    - **Start Command:** `node index.js`
-5. Klik op Deploy! Je krijgt nu een unieke link (bijv. `jouw-chat.onrender.com`) die je met iedereen kunt delen.
-
-## 🗺️ Roadmap & Toekomstige Functies
-
-Wil je meehelpen? Bekijk de roadmap hieronder en pak gerust een item op!
-
-### Fase 1: Stabiliteit & Gebruikerservaring (UX)
-- [ ] **Kamerbeveiliging:** Vergrendel de kamer zodra er 2 personen in zitten en geef eventuele 3e personen een bezet-melding.
-- [ ] **Typ-indicatoren:** Realtime zien wanneer de ander aan het typen is.
-- [ ] **Geluiden & Notificaties:** Subtiel meldingsgeluid bij nieuwe berichten en browser-notificaties.
-- [ ] **Automatisch Herverbinden:** Naadloos herstel van de verbinding bij het overschakelen tussen WiFi en 4G.
-
-### Fase 2: Rich Media & Uitbreidingen
-- [ ] **P2P Bestanden & Foto's:** Direct foto's en documenten sturen tussen apparaten zonder tussenkomst van een server.
-- [ ] **Zelfvernietigende Berichten:** Berichten die automatisch verdwijnen na een ingestelde timer.
-- [ ] **Tijdelijke Aliassen:** Optioneel een tijdelijke bijnaam instellen voor duidelijkheid in het gesprek.
-
-### Fase 3: Schaalbaarheid & Groepen
-- [ ] **Groepsgesprekken (Mesh WebRTC):** Gesprekken met 3 of meer personen in dezelfde kamer.
-- [ ] **Eigen Dedicated TURN Relay:** Extra snelle fallback relay voor gegarandeerde 4G-prestaties.
-- [ ] **Dark Mode Schakelaar:** Eenvoudig wisselen tussen lichte en donkere modus.
+5. Klik op Deploy! Je krijgt nu een unieke link die je met iedereen kunt delen.
 
 ## 🤝 Meewerken & Bijdragen
 Vind je dit een gaaf project en wil je helpen bouwen? Bijdragen zijn van harte welkom!
@@ -136,5 +108,3 @@ Vind je dit een gaaf project en wil je helpen bouwen? Bijdragen zijn van harte w
 3. Commit je wijzigingen (`git commit -m 'MooieFeature toegevoegd'`)
 4. Push naar je branch (`git push origin feature/MooieFeature`)
 5. Open een Pull Request!
-
-Heb je feedback, een suggestie of een bug ontdekt? Maak gerust een **Issue** aan op deze repository!
